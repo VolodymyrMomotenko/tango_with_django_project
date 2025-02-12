@@ -65,6 +65,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+# I am not sure if I need to add this list but the book mentioned it multiple times and it was
+# not in my code so I will just add it now (the contents of it DO exist in MIDDLEWARE[] though)
+MIDDLEWARE_CLASSES =['django.contrib.sessions.middleware.SessionMiddleware',]
+
+
+
 ROOT_URLCONF = 'tango_with_django_project.urls'
 
 TEMPLATES = [
@@ -146,3 +153,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#SESSION_EXPIRE_AT_BROWSER_CLOSE = True
